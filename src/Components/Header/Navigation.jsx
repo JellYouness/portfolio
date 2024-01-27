@@ -68,7 +68,7 @@ const Navigation = () => {
                 >
                     CONTACT
                 </Typography>
-                <Select
+                {/* <Select
                     sx={{
                         boxShadow: 'none',
                         '.MuiOutlinedInput-notchedOutline': { border: 0 },
@@ -89,7 +89,7 @@ const Navigation = () => {
                     <MenuItem value="fr">
                         <Avatar sx={{ width: 24, height: 24 }} src={fr} />
                     </MenuItem>
-                </Select>
+                </Select> */}
             </Stack>
         </>
     );

@@ -36,7 +36,9 @@ const About = () => {
                     </Typography>
                 </Stack>
                 <Stack alignItems="center">
-                    <Typography sx={{ fontSize: '9rem', fontWeight: '600' }}>2</Typography>
+                    <Box sx={{}}>
+                        <Typography sx={{ fontSize: '9rem', fontWeight: '600' }}>2</Typography>
+                    </Box>
                     <Typography variant="h4">
                         Years of <span style={{ fontWeight: '600' }}>Experience</span>
                     </Typography>
