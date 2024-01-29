@@ -9,9 +9,9 @@ const About = () => {
             sx={{
                 // backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
-                height: '93.5vh',
+                minHeight: '93.5vh',
                 overflow: 'hidden',
-                paddingTop: '10.5vh'
+                paddingY: '6.5vh'
             }}
         >
             <Stack justifyContent="start" alignItems="center">
@@ -22,13 +22,23 @@ const About = () => {
                     Know Me More
                 </Typography>
             </Stack>
-            <Stack direction="row" justifyContent="space-evenly" alignItems="center" sx={{ marginTop: '5%' }}>
-                <Stack spacing={3} sx={{ width: '53%' }}>
+            <Stack
+                direction={{
+                    xs: 'column',
+                    md: 'row'
+                }}
+                spacing={{ xs: 4 }}
+                justifyContent="space-evenly"
+                alignItems="center"
+                flexWrap="wrap"
+                sx={{ marginTop: { xs: '10%', md: '5%' } }}
+            >
+                <Stack spacing={3} alignItems="center" sx={{ width: { xs: '80%', md: '53%' } }}>
                     <Typography variant="h4" sx={{ fontWeight: '400' }}>
                         Hi, I'm{' '}
                         <span style={{ fontWeight: '700', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>JELLOULI Youness</span>
                     </Typography>
-                    <Typography variant="h5" sx={{ fontWeight: '400' }}>
+                    <Typography variant="h5" sx={{ fontWeight: '400', textAlign: 'center' }}>
                         I'm an avid developer deeply passionate about web technology. I enjoy crafting simple, clean and slick websites that
                         provide real value to the end user. Delivering work within time and budget which meets client’s requirements is our
                         moto. With every keystroke, I'm dedicated to transforming concepts into dynamic web experiences, contributing to a
@@ -37,7 +47,14 @@ const About = () => {
                 </Stack>
                 <Stack alignItems="center">
                     <Box sx={{}}>
-                        <Typography sx={{ fontSize: '9rem', fontWeight: '600' }}>2</Typography>
+                        <Typography
+                            sx={{
+                                fontSize: { xs: '7rem', md: '9rem' },
+                                fontWeight: '600'
+                            }}
+                        >
+                            2
+                        </Typography>
                     </Box>
                     <Typography variant="h4">
                         Years of <span style={{ fontWeight: '600' }}>Experience</span>

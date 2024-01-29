@@ -10,8 +10,11 @@ import background from './../assets/images/background.jpg';
 import { ColoredTheme } from '../config';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 const Portfolio = () => {
+    let theme = createTheme();
+    theme = responsiveFontSizes(theme);
     const style = {
         background: ColoredTheme
             ? {}
@@ -23,16 +26,18 @@ const Portfolio = () => {
     };
 
     return (
-        <Box component="section" sx={style.background}>
-            <Header />
-            <Home id="Home" />
-            <About id="About" />
-            <Services id="Services" />
-            <Resume id="Resume" />
-            <Projects id="Projects" />
-            <Contact id="Contact" />
-            <Footer id="Footer" />
-        </Box>
+        <ThemeProvider theme={theme}>
+            <Box component="section" sx={style.background}>
+                <Header />
+                <Home id="Home" />
+                <About id="About" />
+                <Services id="Services" />
+                <Resume id="Resume" />
+                <Projects id="Projects" />
+                <Contact id="Contact" />
+                <Footer id="Footer" />
+            </Box>
+        </ThemeProvider>
     );
 };
 

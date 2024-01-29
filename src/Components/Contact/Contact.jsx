@@ -10,8 +10,9 @@ const Contact = () => {
             sx={{
                 // backgroundColor: ColoredTheme ? config.PrimaryColor : 'unset',
                 color: config.TextColor,
-                height: '100vh',
-                overflow: 'hidden'
+                minHeight: '100vh',
+                overflow: 'hidden',
+                paddingY: '6.5vh'
             }}
         >
             <Stack justifyContent="start" alignItems="center">
@@ -19,9 +20,19 @@ const Contact = () => {
                     Contact
                 </Typography>
             </Stack>
-            <Stack direction="row" justifyContent="space-evenly" alignItems="center" flexWrap="wrap">
-                <Stack justifyContent="space-between" spacing={2} width="25%">
-                    <Typography variant="h4" sx={{ fontWeight: '600' }}>
+            <Stack
+                mt={6}
+                direction={{
+                    xs: 'column',
+                    md: 'row'
+                }}
+                spacing={{ xs: 6 }}
+                justifyContent="space-evenly"
+                alignItems={{ xs: 'center', md: 'flex-start' }}
+                flexWrap="wrap"
+            >
+                <Stack justifyContent="space-between" spacing={2} width={{ xs: '80%', md: '25%', lg: '25%' }}>
+                    <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
                         Let's Get in Touch
                     </Typography>
                     <Typography variant="body1" fontWeight="normal">
@@ -41,13 +52,11 @@ const Contact = () => {
                     </Typography>
                     <Typography variant="body1">+212 627 594 239</Typography>
                 </Stack>
-                <Grid
-                    item
-                    lg={6}
-                    width="30%"
+                <Stack
+                    width={{ xs: '80%', md: '25%', lg: '25%' }}
                     sx={{ ms: 'auto', mt: 5, mtLg: 0, wow: 'fadeInUp', visibility: 'visible', animationDelay: '0.3s' }}
                 >
-                    <Typography variant="h4" sx={{ fontWeight: '600' }}>
+                    <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
                         Contact Me
                     </Typography>
                     <Box component="form" method="post" sx={{ marginBottom: '4rem' }} mt={4}>
@@ -86,7 +95,7 @@ const Contact = () => {
                             </Grid>
                         </Grid>
                     </Box>
-                </Grid>
+                </Stack>
             </Stack>
         </Box>
     );
