@@ -9,7 +9,7 @@ const Projects = () => {
         <Box
             component="section"
             sx={{
-                // backgroundColor: 'rgba(248,249,250)',
+                backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
                 minHeight: '93.5vh',
                 overflow: 'hidden',

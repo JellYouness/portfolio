@@ -9,9 +9,9 @@ const About = () => {
             sx={{
                 // backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
-                minHeight: '93.5vh',
+                minHeight: '88vh',
                 overflow: 'hidden',
-                paddingY: '6.5vh'
+                paddingTop: '9vh'
             }}
         >
             <Stack justifyContent="start" alignItems="center">
@@ -31,7 +31,7 @@ const About = () => {
                 justifyContent="space-evenly"
                 alignItems="center"
                 flexWrap="wrap"
-                sx={{ marginTop: { xs: '10%', md: '5%' } }}
+                sx={{ marginTop: { xs: '10%', md: '10%' } }}
             >
                 <Stack spacing={3} alignItems="center" sx={{ width: { xs: '80%', md: '53%' } }}>
                     <Typography variant="h4" sx={{ fontWeight: '400' }}>

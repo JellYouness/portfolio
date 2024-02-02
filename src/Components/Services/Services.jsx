@@ -26,11 +26,11 @@ const ServicesSection = () => {
             <Box
                 component="section"
                 sx={{
-                    // backgroundColor: 'rgba(248,249,250)',
+                    backgroundColor: 'rgba(248,249,250)',
                     color: config.TextColor,
-                    minHeight: '93.5vh',
+                    minHeight: '88vh',
                     overflow: 'hidden',
-                    paddingY: '6.5vh'
+                    paddingTop: '6vh'
                 }}
             >
                 <Container>

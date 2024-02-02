@@ -3,46 +3,17 @@ import { Container, Typography, Grid, Paper, LinearProgress, Button, Stack, Box 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { config, ColoredTheme } from '../../config';
-import istech from '../../assets/images/istech.png';
-import pcc from '../../assets/images/pcc.png';
+import Experience from './experienceList';
 
 const Resume = () => {
-    const Experience = [
-        {
-            icon: istech,
-            height: '35%',
-            margin: true,
-            date: 'Avril 2023 - Juillet 2023',
-            title: 'Web Developer @IS-TECH',
-            subtitle: 'Casablanca, MA',
-            body: [
-                "Conception et développement d'applications web interactives",
-                'Utilisation de ReactJS et Laravel comme technologies principales ',
-                'Création de composants réutilisables',
-                'Intégration avec des API externes'
-            ]
-        },
-        {
-            icon: pcc,
-            height: '100%',
-            margin: false,
-            date: 'Juillet 2022 - Septembre 2022',
-            title: 'Web Developer @Palmeraie Country Club',
-            subtitle: 'Casablanca - Bouskoura, MA',
-            body: [
-                "Conception et mise en œuvre réussies d'une application web dynamique dédiée à la gestion des membres et des abonnements.",
-                "Utilisation d'un ensemble technologique comprenant HTML, CSS, JavaScript, PHP et MySQL pour créer une expérience utilisateur fluide.",
-                "Contribution à la direction créative et à la conception centrée sur l'utilisateur de l'application."
-            ]
-        }
-    ];
     return (
         <Box
             component="section"
             sx={{
                 // backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                paddingY: '6.5vh'
             }}
         >
             <Container>

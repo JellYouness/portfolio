@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import Home from './Home/Home';
 import Services from './Services/Services';
 import About from './About/About';
-import Resume from './Resume/Resume';
+import Resume from './Resume/Experiences';
 import Projects from './Projects/Projects';
 import { Box } from '@mui/material';
 import background from './../assets/images/background.jpg';
