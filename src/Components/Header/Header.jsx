@@ -63,7 +63,7 @@ const Header = () => {
                 <Grid item>{screenWidth < 600 ? <Typography variant="h6">Youness JELLOULI</Typography> : null}</Grid>
 
                 <Grid item>
-                    {screenWidth > 600 ? (
+                    {screenWidth > 770 ? (
                         <Navigation />
                     ) : (
                         <IconButton onClick={openDrawerHandle}>

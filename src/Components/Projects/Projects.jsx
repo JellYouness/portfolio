@@ -3,11 +3,13 @@ import { Container, Typography, Grid, Paper, LinearProgress, Button, Stack, Chip
 import { config, ColoredTheme } from '../../config';
 import image from '../../assets/images/image.png';
 import projects from './projectsList';
+import SlideLeft from '../Animations/SlideLeft';
 
 const Projects = () => {
     return (
         <Box
             component="section"
+            id="Projects"
             sx={{
                 backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
@@ -25,43 +27,45 @@ const Projects = () => {
                         Projects
                     </Typography>
                 </Stack>
-                <Grid
-                    container
-                    justifyContent="center"
-                    spacing={{
-                        xs: 6,
-                        md: 4
-                    }}
-                >
-                    {projects.map((service, index) => (
-                        <Grid item key={index} xs={12} md={6} lg={4}>
-                            <Paper
-                                sx={{
-                                    margin: '0 auto',
-                                    padding: '1rem 1rem',
-                                    width: {
-                                        xs: 300,
-                                        md: 330
-                                    },
-                                    backgroundColor: '#F1F1F1',
-                                    borderRadius: '10px'
-                                }}
-                            >
-                                <img src={image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
-                                <Typography variant="h5" sx={{ fontWeight: 'bold' }} mt={1}>
-                                    {service.title}
-                                </Typography>
-                                {/* <Typography variant="subtitle1">subtitle</Typography> */}
-                                <Typography variant="body1">{service.body}</Typography>
-                                <Stack direction="row" justifyContent="space-between" flexWrap="wrap" mt={3}>
-                                    {service.chips.map((chip, index) => {
-                                        <Chip key={index} label={chip.label} color={chip.color} variant="outlined" />;
-                                    })}
-                                </Stack>
-                            </Paper>
-                        </Grid>
-                    ))}
-                </Grid>
+                <SlideLeft>
+                    <Grid
+                        container
+                        justifyContent="center"
+                        spacing={{
+                            xs: 6,
+                            md: 4
+                        }}
+                    >
+                        {projects.map((service, index) => (
+                            <Grid item key={index} xs={12} md={6} lg={4}>
+                                <Paper
+                                    sx={{
+                                        margin: '0 auto',
+                                        padding: '1rem 1rem',
+                                        width: {
+                                            xs: 300,
+                                            md: 330
+                                        },
+                                        backgroundColor: '#F1F1F1',
+                                        borderRadius: '10px'
+                                    }}
+                                >
+                                    <img src={image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
+                                    <Typography variant="h5" sx={{ fontWeight: 'bold' }} mt={1}>
+                                        {service.title}
+                                    </Typography>
+                                    {/* <Typography variant="subtitle1">subtitle</Typography> */}
+                                    <Typography variant="body1">{service.body}</Typography>
+                                    <Stack direction="row" justifyContent="space-between" flexWrap="wrap" mt={3}>
+                                        {service.chips.map((chip, index) => {
+                                            <Chip key={index} label={chip.label} color={chip.color} variant="outlined" />;
+                                        })}
+                                    </Stack>
+                                </Paper>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </SlideLeft>
             </Container>
         </Box>
     );

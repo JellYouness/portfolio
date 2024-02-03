@@ -1,5 +1,6 @@
 import { useState, createContext } from 'react';
 import Portfolio from './Components/Portfolio';
+import 'animate.css';
 
 export const ThemeContext = createContext(null);
 

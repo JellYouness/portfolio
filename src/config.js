@@ -9,5 +9,6 @@ export const config = {
     // SecondaryColor: ,
     TextColor: ColoredTheme ? '#000' : '#FFF',
     // SecondaryTextColor: ,
+    ButtonColor: ColoredTheme ? '#000' : '#FFF',
     HeaderHeight: '10.5vh'
 };

@@ -4,7 +4,7 @@ import { config } from '../../config';
 
 const Footer = () => {
     return (
-        <Box component="footer">
+        <Box component="footer" id="Footer">
             <Grid
                 container
                 spacing={0}

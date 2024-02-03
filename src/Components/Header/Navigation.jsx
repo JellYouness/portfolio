@@ -1,10 +1,9 @@
-import { Avatar, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, MenuItem, Select, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { config, ColoredTheme } from '../../config';
 import en from '../../assets/Lang/en.webp';
 import fr from '../../assets/Lang/fr.webp';
 import { useState } from 'react';
+import Element from './Element';
 
 const Navigation = () => {
     const [lang, setLang] = useState('en');
@@ -14,60 +13,12 @@ const Navigation = () => {
     return (
         <>
             <Stack direction="row" spacing={0} alignItems="center">
-                <Typography
-                    component={Link}
-                    to="#Home"
-                    variant="subtitle1"
-                    sx={{
-                        fontWeight: '600',
-                        textDecoration: 'none',
-                        color: config.TextColor,
-                        paddingY: '3.25vh',
-                        paddingX: '20px'
-                    }}
-                >
-                    HOME
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#About"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    ABOUT
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Services"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    SERVICES
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Resume"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    RESUME
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Projects"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    PROJECTS
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Contact"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    CONTACT
-                </Typography>
+                <Element href="#Home" title="HOME" />
+                <Element href="#About" title="ABOUT" />
+                <Element href="#Services" title="SERVICES" />
+                <Element href="#Resume" title="RESUME" />
+                <Element href="#Projects" title="PROJECTS" />
+                <Element href="#Contact" title="CONTACT" />
                 {/* <Select
                     sx={{
                         boxShadow: 'none',

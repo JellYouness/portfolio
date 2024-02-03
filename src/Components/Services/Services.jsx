@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Typography, Grid, Paper, Box, Stack, Tooltip } from '@mui/material';
-import { ThemeProvider, createMuiTheme, createTheme } from '@mui/material/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Container, Typography, Box, Stack, Tooltip } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { config, ColoredTheme } from '../../config';
 import services from './servicesList';
+import SlideUp from '../Animations/SlideUp';
 
 const ServicesSection = () => {
     const theme = createTheme({
@@ -25,6 +25,7 @@ const ServicesSection = () => {
         <ThemeProvider theme={theme}>
             <Box
                 component="section"
+                id="Services"
                 sx={{
                     backgroundColor: 'rgba(248,249,250)',
                     color: config.TextColor,
@@ -42,54 +43,56 @@ const ServicesSection = () => {
                             My Technologies Stack
                         </Typography>
                     </Stack>
-                    <Stack
-                        useFlexGap
-                        flexWrap="wrap"
-                        direction="row"
-                        justifyContent="center"
-                        alignItems="center"
-                        spacing={{
-                            xs: 4,
-                            md: 10
-                        }}
-                        mt="8rem"
-                    >
-                        {services.map((service, index) => (
-                            <Tooltip key={index} title={service.title} placement="top">
-                                <Box
-                                    sx={{
-                                        padding: '0.45rem',
-                                        border: '3px solid transparent',
-                                        backgroundColor: 'rgba(230, 230, 230, 0.7)',
-                                        transition: '0.6s',
-                                        borderRadius: '20%',
-                                        '&:hover': {
-                                            border: '3px solid ' + config.PrimaryColor,
-                                            borderRadius: '50%'
-                                        }
-                                    }}
-                                >
+                    <SlideUp>
+                        <Stack
+                            useFlexGap
+                            flexWrap="wrap"
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={{
+                                xs: 4,
+                                md: 10
+                            }}
+                            mt="8rem"
+                        >
+                            {services.map((service, index) => (
+                                <Tooltip key={index} title={service.title} placement="top">
                                     <Box
                                         sx={{
+                                            padding: '0.45rem',
+                                            border: '3px solid transparent',
+                                            backgroundColor: 'rgba(230, 230, 230, 0.7)',
+                                            transition: '0.6s',
+                                            borderRadius: '20%',
                                             '&:hover': {
-                                                transform: 'scale(0.85)',
-                                                transition: '0.6s'
+                                                border: '3px solid ' + config.PrimaryColor,
+                                                borderRadius: '50%'
                                             }
                                         }}
                                     >
-                                        <img
-                                            style={{
-                                                width: '4rem',
-                                                height: '4rem',
-                                                margin: '0 auto'
+                                        <Box
+                                            sx={{
+                                                '&:hover': {
+                                                    transform: 'scale(0.85)',
+                                                    transition: '0.6s'
+                                                }
                                             }}
-                                            src={service.icon}
-                                        />
+                                        >
+                                            <img
+                                                style={{
+                                                    width: '4rem',
+                                                    height: '4rem',
+                                                    margin: '0 auto'
+                                                }}
+                                                src={service.icon}
+                                            />
+                                        </Box>
                                     </Box>
-                                </Box>
-                            </Tooltip>
-                        ))}
-                    </Stack>
+                                </Tooltip>
+                            ))}
+                        </Stack>
+                    </SlideUp>
                 </Container>
             </Box>
         </ThemeProvider>

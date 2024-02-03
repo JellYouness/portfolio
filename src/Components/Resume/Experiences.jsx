@@ -9,6 +9,7 @@ const Resume = () => {
     return (
         <Box
             component="section"
+            id="Resume"
             sx={{
                 // backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,

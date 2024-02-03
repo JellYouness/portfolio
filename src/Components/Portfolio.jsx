@@ -7,7 +7,7 @@ import Resume from './Resume/Experiences';
 import Projects from './Projects/Projects';
 import { Box } from '@mui/material';
 import background from './../assets/images/background.jpg';
-import { ColoredTheme } from '../config';
+import { ColoredTheme, config } from '../config';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
@@ -15,6 +15,7 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 const Portfolio = () => {
     let theme = createTheme();
     theme = responsiveFontSizes(theme);
+
     const style = {
         background: ColoredTheme
             ? {}
@@ -22,20 +23,23 @@ const Portfolio = () => {
                   backgroundImage: `url(${background})`,
                   backgroundAttachment: 'fixed',
                   backgroundSize: 'cover'
-              }
+              },
+        '*::selection': {
+            backgroundColor: config.PrimaryColor
+        }
     };
 
     return (
         <ThemeProvider theme={theme}>
-            <Box component="section" sx={style.background}>
+            <Box component="section" sx={style}>
                 <Header />
-                <Home id="Home" />
-                <About id="About" />
-                <Services id="Services" />
-                <Resume id="Resume" />
-                <Projects id="Projects" />
-                <Contact id="Contact" />
-                <Footer id="Footer" />
+                <Home />
+                <About />
+                <Services />
+                <Resume />
+                <Projects />
+                <Contact />
+                <Footer />
             </Box>
         </ThemeProvider>
     );
