@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, LinearProgress, Button, Stack, Chip, Box } from '@mui/material';
 import { config, ColoredTheme } from '../../config';
-import image from '../../assets/images/image.png';
+
 import projects from './projectsList';
 import SlideLeft from '../Animations/SlideLeft';
 
@@ -36,7 +36,7 @@ const Projects = () => {
                             md: 4
                         }}
                     >
-                        {projects.map((service, index) => (
+                        {projects.map((project, index) => (
                             <Grid item key={index} xs={12} md={6} lg={4}>
                                 <Paper
                                     sx={{
@@ -50,15 +50,20 @@ const Projects = () => {
                                         borderRadius: '10px'
                                     }}
                                 >
-                                    <img src={image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
+                                    <img src={project.image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
                                     <Typography variant="h5" sx={{ fontWeight: 'bold' }} mt={1}>
-                                        {service.title}
+                                        {project.title}
                                     </Typography>
                                     {/* <Typography variant="subtitle1">subtitle</Typography> */}
-                                    <Typography variant="body1">{service.body}</Typography>
+                                    <Typography variant="body1">{project.body}</Typography>
                                     <Stack direction="row" justifyContent="space-between" flexWrap="wrap" mt={3}>
-                                        {service.chips.map((chip, index) => {
-                                            <Chip key={index} label={chip.label} color={chip.color} variant="outlined" />;
+                                        {project.chips.map((chip, index) => {
+                                            <Chip
+                                                key={index}
+                                                label={chip.label}
+                                                sx={{ bgcolor: chip.bg, color: chip.color }}
+                                                variant="outlined"
+                                            />;
                                         })}
                                     </Stack>
                                 </Paper>

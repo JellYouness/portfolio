@@ -45,17 +45,20 @@ const Header = () => {
             >
                 <Grid item>
                     <Stack justifyContent="space-between" alignItems="center" direction="row" spacing={2}>
-                        <Box
-                            component="img"
-                            src={image}
-                            sx={{
-                                height: {
-                                    xs: '35px',
-                                    md: '40px',
-                                    lg: '50px'
-                                }
-                            }}
-                        />
+                        <Box component="a" href="/">
+                            <Box
+                                component="img"
+                                src={image}
+                                sx={{
+                                    height: {
+                                        xs: '35px',
+                                        md: '40px',
+                                        lg: '50px'
+                                    }
+                                }}
+                            />
+                        </Box>
+
                         {screenWidth > 600 ? <Typography variant="h6">Youness JELLOULI</Typography> : null}
                     </Stack>
                 </Grid>
