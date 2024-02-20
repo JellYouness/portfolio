@@ -41,7 +41,14 @@ const Header = () => {
                 justifyContent={{ xs: 'space-between', md: 'space-around' }}
                 alignItems="center"
                 direction="row"
-                sx={{ height: config.HeaderHeight, paddingX: { xs: '10px' } }}
+                sx={{
+                    height: {
+                        xs: '8vh',
+                        md: '9vh',
+                        lg: '10vh'
+                    },
+                    paddingX: { xs: '10px' }
+                }}
             >
                 <Grid item>
                     <Stack justifyContent="space-between" alignItems="center" direction="row" spacing={2}>
@@ -51,9 +58,9 @@ const Header = () => {
                                 src={image}
                                 sx={{
                                     height: {
-                                        xs: '35px',
+                                        xs: '5vh',
                                         md: '40px',
-                                        lg: '50px'
+                                        lg: '6vh'
                                     }
                                 }}
                             />

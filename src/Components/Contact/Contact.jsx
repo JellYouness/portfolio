@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Grid, Typography, TextField, Button, Divider, Stack, Box, TextareaAutosize, InputLabel } from '@mui/material';
 import { ColoredTheme, config } from '../../config';
 import { ArrowForward } from '@mui/icons-material';
@@ -6,10 +6,28 @@ import SlideUp from '../Animations/SlideUp';
 import { useSelector } from 'react-redux';
 import eng from '../../Data/eng';
 import fr from '../../Data/fr';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const { value } = useSelector((state) => state.lang);
     const data = value === 'en' ? eng : fr;
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs
+            .sendForm('service_0uvn7ai', 'template_e0dowwb', form.current, {
+                publicKey: 'dKYNURZMld6SibCCd'
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
+    };
     return (
         <Box
             component="section"
@@ -49,7 +67,7 @@ const Contact = () => {
                         <Typography variant="h5" fontWeight="500">
                             {data.Living}
                         </Typography>
-                        <Typography variant="body1">Salmia 2, Casablanca, MA.</Typography>
+                        <Typography variant="body1">Casablanca, MA.</Typography>
                         <Typography variant="h5" fontWeight="500">
                             Email:
                         </Typography>
@@ -66,19 +84,19 @@ const Contact = () => {
                         <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
                             {data.ContactMe}
                         </Typography>
-                        <Box component="form" method="post" sx={{ marginBottom: '4rem' }} mt={4}>
+                        <Box component="form" ref={form} onSubmit={sendEmail} sx={{ marginBottom: '4rem' }} mt={4}>
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <InputLabel htmlFor="name">{data.Name}:</InputLabel>
-                                    <TextField id="name" fullWidth variant="standard" />
+                                    <TextField id="name" name="name" fullWidth variant="standard" />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <InputLabel htmlFor="email">{data.Email}:</InputLabel>
-                                    <TextField id="email" fullWidth variant="standard" />
+                                    <TextField id="email" name="email" fullWidth variant="standard" />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <InputLabel htmlFor="message">{data.Message}:</InputLabel>
-                                    <TextField id="message" fullWidth variant="standard" multiline rows={5} />
+                                    <TextField id="message" name="message" fullWidth variant="standard" multiline rows={5} />
                                 </Grid>
                                 <Grid item xs={12} text-lg-start>
                                     <Button

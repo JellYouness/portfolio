@@ -51,29 +51,34 @@ const Projects = () => {
                                             xs: 300,
                                             md: 330
                                         },
+                                        height: 450,
                                         backgroundColor: '#F1F1F1',
                                         borderRadius: '10px'
                                     }}
                                 >
-                                    <img src={project.image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
-                                    <Typography variant="h5" sx={{ fontWeight: 'bold' }} mt={1}>
-                                        {project.title}
-                                    </Typography>
-                                    {/* <Typography variant="subtitle1">subtitle</Typography> */}
-                                    <Typography variant="body1">{project.body}</Typography>
-                                    <Stack direction="row" justifyContent="space-between" flexWrap="wrap" mt={3}>
-                                        {project.chips.map((chip, index) => {
-                                            <Chip
-                                                key={index}
-                                                label={chip.label}
-                                                sx={{ bgcolor: chip.bg, color: chip.color }}
-                                                variant="outlined"
-                                            />;
-                                        })}
+                                    <Stack direction="column" height="100%" justifyContent="space-around" spacing={1}>
+                                        <img src={project.image} style={{ border: '1px solid black', borderRadius: '10px' }} width="100%" />
+                                        <Typography variant="h5" sx={{ fontWeight: 'bold' }} mt={1}>
+                                            {project.title}
+                                        </Typography>
+                                        {/* <Typography variant="subtitle1">subtitle</Typography> */}
+                                        <Typography variant="body1" sx={{ height: 300 }}>
+                                            {project.body}
+                                        </Typography>
+                                        <Stack direction="row" justifyContent="space-between" flexWrap="wrap" mt={3}>
+                                            {project.chips.map((chip, index) => {
+                                                <Chip
+                                                    key={index}
+                                                    label={chip.label}
+                                                    sx={{ bgcolor: chip.bg, color: chip.color }}
+                                                    variant="outlined"
+                                                />;
+                                            })}
+                                        </Stack>
+                                        <Button variant="outlined" fullWidth href={project.preview}>
+                                            Preview
+                                        </Button>
                                     </Stack>
-                                    <Button variant="outlined" fullWidth href={project.preview}>
-                                        Preview
-                                    </Button>
                                 </Paper>
                             </Grid>
                         ))}

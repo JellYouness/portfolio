@@ -2,6 +2,7 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { config, ColoredTheme } from '../../config';
 import image from '../../assets/images/portfolio.png';
+import cv from '../../assets/cv/Youness Jellouli.pdf';
 import { ArrowDownward } from '@mui/icons-material';
 import { TypeAnimation } from 'react-type-animation';
 import ZoomIn from '../Animations/ZoomIn';
@@ -81,7 +82,8 @@ const Hero = () => {
                                 ml={3}
                                 variant="h5"
                                 component="a"
-                                href="#Contact"
+                                href={cv}
+                                target="_blank"
                                 sx={{
                                     border: '1px solid black',
                                     paddingX: { xs: '20px', md: '30px', lg: '40px' },
