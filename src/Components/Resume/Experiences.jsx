@@ -3,9 +3,16 @@ import { Container, Typography, Grid, Paper, LinearProgress, Button, Stack, Box 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { config, ColoredTheme } from '../../config';
-import Experience from './experienceList';
+import ExpFr from './experienceListFR';
+import ExpEn from './experienceListEN';
+import { useSelector } from 'react-redux';
+import eng from '../../Data/eng';
+import fr from '../../Data/fr';
 
 const Resume = () => {
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : fr;
+    const Experience = value === 'en' ? ExpEn : ExpFr;
     return (
         <Box
             component="section"
@@ -20,10 +27,10 @@ const Resume = () => {
             <Container>
                 <Stack justifyContent="start" alignItems="center" sx={{ marginBottom: '2rem' }}>
                     <Typography variant="subtitle1" sx={{ backgroundColor: config.PrimaryColor, paddingX: '10px', fontWeight: '500' }}>
-                        What i have done so far
+                        {data.ExperienceTitle}
                     </Typography>
                     <Typography variant="h4" sx={{ fontWeight: '500' }}>
-                        Work Experience
+                        {data.ExperienceSubTitle}
                     </Typography>
                 </Stack>
                 <VerticalTimeline lineColor={config.PrimaryColor}>

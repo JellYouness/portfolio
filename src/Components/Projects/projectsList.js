@@ -1,6 +1,7 @@
 // prettier-ignore
 import dgm from '../../assets/images/imagee.png';
 import gds from '../../assets/images/gds.png';
+import gdm from '../../assets/images/gdm.png';
 
 const projects = [
     {
@@ -9,42 +10,103 @@ const projects = [
         body: ' A Static Website for an agency named "Digital Mind", showing their services and projects also the team members.',
         chips: [
             {
-                index: 4,
                 label: 'Html',
-                color: 'black',
+                color: 'orange',
+                bg: 'white'
+            },
+            {
+                label: 'Css',
+                color: 'blue',
+                bg: 'white'
+            },
+            {
+                label: 'Bootstrap',
+                color: 'purple',
+                bg: 'white'
+            },
+            {
+                label: 'Javascript',
+                color: 'yellow',
                 bg: 'white'
             }
-        ]
+        ],
+        preview: '/ji'
     },
     {
-        image: dgm,
-        title: 'title',
-        body: ' Developed a financial management web app for SOSIPO Association, automating processes, enhancing transparency, and boosting efficiency. Achieved financial stability and member satisfaction.',
+        image: gdm,
+        title: 'PCC Membership management',
+        body: "Conception et réalisation d'une application web pour la gestion des membres et les abonnements de l'entreprise Palmeraie Country Club.",
         chips: [
             {
-                label: 'React',
-                color: 'primary'
+                label: 'Html',
+                color: 'orange',
+                bg: 'white'
+            },
+            {
+                label: 'Css',
+                color: 'blue',
+                bg: 'white'
+            },
+            {
+                label: 'Bootstrap',
+                color: 'purple',
+                bg: 'white'
+            },
+            {
+                label: 'Javascript',
+                color: 'yellow',
+                bg: 'white'
+            },
+            {
+                label: 'Php',
+                color: 'blue',
+                bg: 'white'
             },
             {
                 label: 'SQL',
-                color: 'secondary'
+                color: 'gray',
+                bg: 'white'
             }
-        ]
+        ],
+        preview: null
     },
     {
         image: gds,
-        title: 'Gestion de Stock',
-        body: ' Developed a financial management web app for SOSIPO Association, automating processes, enhancing transparency, and boosting efficiency. Achieved financial stability and member satisfaction.',
+        title: 'Stock Manager',
+        body: "Conception et develepoment d'une application web de gestion de stock d'une entreprise.",
         chips: [
             {
-                label: 'React',
-                color: 'primary'
+                label: 'Html',
+                color: 'orange',
+                bg: 'white'
+            },
+            {
+                label: 'Css',
+                color: 'blue',
+                bg: 'white'
+            },
+            {
+                label: 'Bootstrap',
+                color: 'purple',
+                bg: 'white'
+            },
+            {
+                label: 'Javascript',
+                color: 'yellow',
+                bg: 'white'
+            },
+            {
+                label: 'Php',
+                color: 'blue',
+                bg: 'white'
             },
             {
                 label: 'SQL',
-                color: 'secondary'
+                color: 'gray',
+                bg: 'white'
             }
-        ]
+        ],
+        preview: null
     }
 ];
 

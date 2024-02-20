@@ -2,8 +2,13 @@ import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { config, ColoredTheme } from '../../config';
 import SlideLeft from '../Animations/SlideLeft';
+import { useSelector } from 'react-redux';
+import eng from '../../Data/eng';
+import fr from '../../Data/fr';
 
 const About = () => {
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : fr;
     return (
         <Box
             component="section"
@@ -18,10 +23,10 @@ const About = () => {
         >
             <Stack justifyContent="start" alignItems="center">
                 <Typography variant="subtitle1" sx={{ backgroundColor: config.PrimaryColor, paddingX: '10px', fontWeight: '500' }}>
-                    About Me
+                    {data.AboutTitle}
                 </Typography>
                 <Typography variant="h4" sx={{ fontWeight: '500' }}>
-                    Know Me More
+                    {data.AboutSubTitle}
                 </Typography>
             </Stack>
             <SlideLeft>
@@ -38,16 +43,13 @@ const About = () => {
                 >
                     <Stack spacing={3} alignItems="center" sx={{ width: { xs: '80%', md: '53%' } }}>
                         <Typography variant="h4" sx={{ fontWeight: '400' }}>
-                            Hi, I'm{' '}
+                            {data.Hi}{' '}
                             <span style={{ fontWeight: '700', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
                                 JELLOULI Youness
                             </span>
                         </Typography>
                         <Typography variant="h5" sx={{ fontWeight: '400', textAlign: 'center' }}>
-                            I'm an avid developer deeply passionate about web technology. I enjoy crafting simple, clean and slick websites
-                            that provide real value to the end user. Delivering work within time and budget which meets client’s
-                            requirements is our moto. With every keystroke, I'm dedicated to transforming concepts into dynamic web
-                            experiences, contributing to a digital realm that's both intuitive and engaging.
+                            {data.AboutBody}
                         </Typography>
                     </Stack>
                     <Stack alignItems="center">
@@ -62,7 +64,8 @@ const About = () => {
                             </Typography>
                         </Box>
                         <Typography variant="h4">
-                            Years of <span style={{ fontWeight: '600' }}>Experience</span>
+                            {data.AboutYears}
+                            <span style={{ fontWeight: '600' }}>Experience</span>
                         </Typography>
                     </Stack>
                 </Stack>

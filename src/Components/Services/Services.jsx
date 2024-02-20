@@ -4,8 +4,13 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { config, ColoredTheme } from '../../config';
 import services from './servicesList';
 import SlideUp from '../Animations/SlideUp';
+import { useSelector } from 'react-redux';
+import eng from '../../Data/eng';
+import fr from '../../Data/fr';
 
 const ServicesSection = () => {
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : fr;
     const theme = createTheme({
         components: {
             MuiTooltip: {
@@ -37,10 +42,10 @@ const ServicesSection = () => {
                 <Container>
                     <Stack justifyContent="start" alignItems="center">
                         <Typography variant="subtitle1" sx={{ backgroundColor: config.PrimaryColor, paddingX: '10px', fontWeight: '500' }}>
-                            What i do?
+                            {data.ServicesTitle}
                         </Typography>
                         <Typography variant="h4" sx={{ fontWeight: '500' }}>
-                            My Technologies Stack
+                            {data.ServicesSubTitle}
                         </Typography>
                     </Stack>
                     <SlideUp>

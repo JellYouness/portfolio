@@ -4,8 +4,13 @@ import { config, ColoredTheme } from '../../config';
 
 import projects from './projectsList';
 import SlideLeft from '../Animations/SlideLeft';
+import { useSelector } from 'react-redux';
+import eng from '../../Data/eng';
+import fr from '../../Data/fr';
 
 const Projects = () => {
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : fr;
     return (
         <Box
             component="section"
@@ -21,10 +26,10 @@ const Projects = () => {
             <Container>
                 <Stack justifyContent="start" alignItems="center" sx={{ marginBottom: '2rem' }}>
                     <Typography variant="subtitle1" sx={{ backgroundColor: config.PrimaryColor, paddingX: '10px', fontWeight: '500' }}>
-                        My Work
+                        {data.ProjectsTitle}
                     </Typography>
                     <Typography variant="h4" sx={{ fontWeight: '500' }}>
-                        Projects
+                        {data.ProjectsSubTitle}
                     </Typography>
                 </Stack>
                 <SlideLeft>
@@ -66,6 +71,9 @@ const Projects = () => {
                                             />;
                                         })}
                                     </Stack>
+                                    <Button variant="outlined" fullWidth href={project.preview}>
+                                        Preview
+                                    </Button>
                                 </Paper>
                             </Grid>
                         ))}

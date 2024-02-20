@@ -4,71 +4,39 @@ import { Link } from 'react-router-dom';
 import { config, ColoredTheme } from '../../config';
 import en from '../../assets/Lang/en.webp';
 import fr from '../../assets/Lang/fr.webp';
-import { useState } from 'react';
+import Element from './Element';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEng, useFr } from '../../store/lang';
+import eng from '../../Data/eng';
+import frr from '../../Data/fr';
 
 const MobileNavigation = () => {
-    const [lang, setLang] = useState('en');
+    const dispatch = useDispatch();
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : frr;
+
     const handleLangChange = (event) => {
-        setLang(event.target.value);
+        switch (event.target.value) {
+            case 'en':
+                dispatch(useEng());
+                break;
+            case 'fr':
+                dispatch(useFr());
+                break;
+            default:
+                break;
+        }
     };
     return (
         <>
             <Stack spacing={0} alignItems="center" px={4}>
-                <Typography
-                    component={Link}
-                    to="#Home"
-                    variant="subtitle1"
-                    sx={{
-                        fontWeight: '600',
-                        textDecoration: 'none',
-                        color: config.TextColor,
-                        paddingY: '3.25vh',
-                        paddingX: '20px'
-                    }}
-                >
-                    HOME
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#About"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    ABOUT
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Services"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    SERVICES
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Resume"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    RESUME
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Projects"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    PROJECTS
-                </Typography>
-                <Typography
-                    component={Link}
-                    to="#Contact"
-                    variant="subtitle1"
-                    sx={{ fontWeight: '600', textDecoration: 'none', color: config.TextColor, paddingY: '24px', paddingX: '20px' }}
-                >
-                    CONTACT
-                </Typography>
-                {/* <Select
+                <Element href="#Hero" title={data.Home} />
+                <Element href="#About" title={data.About} />
+                <Element href="#Services" title={data.Services} />
+                <Element href="#Resume" title={data.Experiences} />
+                <Element href="#Projects" title={data.Projects} />
+                <Element href="#Contact" title={data.Contact} />
+                <Select
                     sx={{
                         boxShadow: 'none',
                         '.MuiOutlinedInput-notchedOutline': { border: 0 },
@@ -79,7 +47,7 @@ const MobileNavigation = () => {
                             border: 0
                         }
                     }}
-                    value={lang}
+                    value={value}
                     autoWidth
                     onChange={handleLangChange}
                 >
@@ -89,7 +57,7 @@ const MobileNavigation = () => {
                     <MenuItem value="fr">
                         <Avatar sx={{ width: 24, height: 24 }} src={fr} />
                     </MenuItem>
-                </Select> */}
+                </Select>
             </Stack>
         </>
     );

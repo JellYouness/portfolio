@@ -3,8 +3,13 @@ import { Grid, Typography, TextField, Button, Divider, Stack, Box, TextareaAutos
 import { ColoredTheme, config } from '../../config';
 import { ArrowForward } from '@mui/icons-material';
 import SlideUp from '../Animations/SlideUp';
+import { useSelector } from 'react-redux';
+import eng from '../../Data/eng';
+import fr from '../../Data/fr';
 
 const Contact = () => {
+    const { value } = useSelector((state) => state.lang);
+    const data = value === 'en' ? eng : fr;
     return (
         <Box
             component="section"
@@ -36,14 +41,13 @@ const Contact = () => {
                 >
                     <Stack justifyContent="space-between" spacing={2} width={{ xs: '80%', md: '25%', lg: '25%' }}>
                         <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
-                            Let's Get in Touch
+                            {data.InTouch}
                         </Typography>
                         <Typography variant="body1" fontWeight="normal">
-                            I enjoy discussing new projects and design challenges. Please share as much info as possible so we can get the
-                            most out of our first catch-up.
+                            {data.InTouchDesc}
                         </Typography>
                         <Typography variant="h5" fontWeight="500">
-                            Living In:
+                            {data.Living}
                         </Typography>
                         <Typography variant="body1">Salmia 2, Casablanca, MA.</Typography>
                         <Typography variant="h5" fontWeight="500">
@@ -51,7 +55,7 @@ const Contact = () => {
                         </Typography>
                         <Typography variant="body1">younessjellouli12@gmail.com</Typography>
                         <Typography variant="h5" fontWeight="500">
-                            Call:
+                            {data.Call}
                         </Typography>
                         <Typography variant="body1">+212 627 594 239</Typography>
                     </Stack>
@@ -60,20 +64,20 @@ const Contact = () => {
                         sx={{ ms: 'auto', mt: 5, mtLg: 0, wow: 'fadeInUp', visibility: 'visible', animationDelay: '0.3s' }}
                     >
                         <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
-                            Contact Me
+                            {data.ContactMe}
                         </Typography>
                         <Box component="form" method="post" sx={{ marginBottom: '4rem' }} mt={4}>
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
-                                    <InputLabel htmlFor="name">Your Name:</InputLabel>
+                                    <InputLabel htmlFor="name">{data.Name}:</InputLabel>
                                     <TextField id="name" fullWidth variant="standard" />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <InputLabel htmlFor="email">Your Email:</InputLabel>
+                                    <InputLabel htmlFor="email">{data.Email}:</InputLabel>
                                     <TextField id="email" fullWidth variant="standard" />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <InputLabel htmlFor="message">Your Message:</InputLabel>
+                                    <InputLabel htmlFor="message">{data.Message}:</InputLabel>
                                     <TextField id="message" fullWidth variant="standard" multiline rows={5} />
                                 </Grid>
                                 <Grid item xs={12} text-lg-start>
@@ -93,7 +97,7 @@ const Contact = () => {
                                         }}
                                         endIcon={<ArrowForward />}
                                     >
-                                        Send
+                                        {data.Send}
                                     </Button>
                                 </Grid>
                             </Grid>
