@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Grid, Typography, TextField, Button, Divider, Stack, Box, TextareaAutosize, InputLabel } from '@mui/material';
+import { Grid, Typography, TextField, Button, Divider, Stack, Box, TextareaAutosize, InputLabel, Alert } from '@mui/material';
 import { ColoredTheme, config } from '../../config';
 import { ArrowForward } from '@mui/icons-material';
 import SlideUp from '../Animations/SlideUp';
@@ -7,11 +7,13 @@ import { useSelector } from 'react-redux';
 import eng from '../../Data/eng';
 import fr from '../../Data/fr';
 import emailjs from '@emailjs/browser';
+import SlideLeft from '../Animations/SlideLeft';
 
 const Contact = () => {
     const { value } = useSelector((state) => state.lang);
     const data = value === 'en' ? eng : fr;
     const form = useRef();
+    const [isSent, setIsSent] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -21,12 +23,13 @@ const Contact = () => {
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    setIsSent((current) => !current);
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
                 }
             );
+        form.current.reset();
     };
     return (
         <Box
@@ -35,9 +38,9 @@ const Contact = () => {
             sx={{
                 // backgroundColor: ColoredTheme ? config.PrimaryColor : 'unset',
                 color: config.TextColor,
-                minHeight: '100vh',
+                // minHeight: '100vh',
                 overflow: 'hidden',
-                paddingY: '6.5vh'
+                padding: '6.5vh 0 6vh 0'
             }}
         >
             <Stack justifyContent="start" alignItems="center">
@@ -61,7 +64,7 @@ const Contact = () => {
                         <Typography variant="h4" sx={{ fontWeight: '600', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
                             {data.InTouch}
                         </Typography>
-                        <Typography variant="body1" fontWeight="normal">
+                        <Typography variant="body1" fontWeight="normal" sx={{ textIndent: 20 }}>
                             {data.InTouchDesc}
                         </Typography>
                         <Typography variant="h5" fontWeight="500">
@@ -98,6 +101,13 @@ const Contact = () => {
                                     <InputLabel htmlFor="message">{data.Message}:</InputLabel>
                                     <TextField id="message" name="message" fullWidth variant="standard" multiline rows={5} />
                                 </Grid>
+                                {isSent && (
+                                    <Grid item xs={12}>
+                                        <SlideLeft>
+                                            <Alert severity="success">{data.Sent}</Alert>
+                                        </SlideLeft>
+                                    </Grid>
+                                )}
                                 <Grid item xs={12} text-lg-start>
                                     <Button
                                         id="submit-btn"

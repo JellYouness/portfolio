@@ -44,8 +44,8 @@ const Header = () => {
                 sx={{
                     height: {
                         xs: '8vh',
-                        md: '9vh',
-                        lg: '10vh'
+                        md: '7vh',
+                        lg: '9vh'
                     },
                     paddingX: { xs: '10px' }
                 }}

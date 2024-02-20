@@ -34,9 +34,9 @@ const ServicesSection = () => {
                 sx={{
                     backgroundColor: 'rgba(248,249,250)',
                     color: config.TextColor,
-                    minHeight: '88vh',
+                    // minHeight: '88vh',
                     overflow: 'hidden',
-                    paddingTop: '6vh'
+                    padding: '6vh 0 15vh 0'
                 }}
             >
                 <Container>

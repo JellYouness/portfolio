@@ -16,9 +16,9 @@ const About = () => {
             sx={{
                 // backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
-                minHeight: '88vh',
+                // minHeight: '88vh',
                 overflow: 'hidden',
-                paddingTop: '9vh'
+                padding: '9vh 0 15vh'
             }}
         >
             <Stack justifyContent="start" alignItems="center">

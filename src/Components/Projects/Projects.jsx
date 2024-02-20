@@ -18,9 +18,9 @@ const Projects = () => {
             sx={{
                 backgroundColor: 'rgba(248,249,250)',
                 color: config.TextColor,
-                minHeight: '93.5vh',
+                // minHeight: '93.5vh',
                 overflow: 'hidden',
-                paddingY: '6.5vh'
+                padding: '6.5vh 0 15vh 0'
             }}
         >
             <Container>

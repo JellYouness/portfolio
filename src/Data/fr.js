@@ -50,6 +50,7 @@ const fr = {
     Name: 'Ton Nom',
     Email: 'Ton Email',
     Message: 'Ton Message',
-    Send: 'Envoyer'
+    Send: 'Envoyer',
+    Sent: 'Votre message a été envoyé'
 };
 export default fr;

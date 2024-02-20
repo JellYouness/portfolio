@@ -7,6 +7,7 @@ import { ColoredTheme, config } from '../config';
 import Footer from './Footer/Footer';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
+import FABs from './FABs';
 
 const Portfolio = () => {
     let theme = createTheme();
@@ -29,6 +30,7 @@ const Portfolio = () => {
         <ThemeProvider theme={theme}>
             <Box component="section" sx={style}>
                 <Header />
+                <FABs />
                 <Outlet />
                 <Footer />
             </Box>

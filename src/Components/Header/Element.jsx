@@ -7,7 +7,7 @@ const Element = ({ href, title }) => {
         <Typography
             component="a"
             href={href}
-            variant="subtitle1"
+            variant="subtitle2"
             sx={{
                 fontWeight: '600',
                 textDecoration: 'none',

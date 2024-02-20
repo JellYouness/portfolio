@@ -49,6 +49,7 @@ const eng = {
     Name: 'Your Name',
     Email: 'Your Email',
     Message: 'Your Message',
-    Send: 'Send'
+    Send: 'Send',
+    Sent: 'Your Message has been sent'
 };
 export default eng;
