@@ -39,7 +39,7 @@ const About = () => {
                     justifyContent="space-evenly"
                     alignItems="center"
                     flexWrap="wrap"
-                    sx={{ marginTop: { xs: '10%', md: '10%' } }}
+                    sx={{ marginTop: { xs: '10%', md: '6%' } }}
                 >
                     <Stack spacing={3} alignItems="center" sx={{ width: { xs: '80%', md: '53%' } }}>
                         <Typography variant="h4" sx={{ fontWeight: '400' }}>

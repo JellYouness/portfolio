@@ -1,6 +1,6 @@
 import Home from '../Components/Home';
 import Portfolio from '../Components/Portfolio';
-import StockManager from '../Components/Projects/Presentations/StockManager';
+import StockManager from "../Components/Projects/Presentations/OPTIM'STOCK/StockManager";
 
 const MainRoutes = {
     path: '/',

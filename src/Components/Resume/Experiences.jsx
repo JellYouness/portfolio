@@ -44,6 +44,7 @@ const Resume = () => {
                             iconStyle={{ background: config.White, color: '#fff' }}
                             icon={
                                 <img
+                                    loading="lazy"
                                     style={{
                                         height: experience.height,
                                         display: 'block',

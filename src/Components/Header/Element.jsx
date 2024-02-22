@@ -12,7 +12,7 @@ const Element = ({ href, title }) => {
                 fontWeight: '600',
                 textDecoration: 'none',
                 color: config.TextColor,
-                paddingY: '24px',
+                paddingY: '18px',
                 paddingX: '20px'
             }}
         >

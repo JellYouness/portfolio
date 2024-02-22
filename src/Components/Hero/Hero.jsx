@@ -102,6 +102,7 @@ const Hero = () => {
                     </Box>
                     <Box
                         component="img"
+                        loading="lazy"
                         sx={{
                             boxShadow: '0 1rem 3rem rgba(0,0,0,.35)',
                             border: '5px solid white',

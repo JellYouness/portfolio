@@ -52,10 +52,10 @@ const MobileNavigation = () => {
                     onChange={handleLangChange}
                 >
                     <MenuItem value="en">
-                        <Avatar sx={{ width: 24, height: 24 }} src={en} />
+                        <Avatar loading="lazy" sx={{ width: 24, height: 24 }} src={en} />
                     </MenuItem>
                     <MenuItem value="fr">
-                        <Avatar sx={{ width: 24, height: 24 }} src={fr} />
+                        <Avatar loading="lazy" sx={{ width: 24, height: 24 }} src={fr} />
                     </MenuItem>
                 </Select>
             </Stack>

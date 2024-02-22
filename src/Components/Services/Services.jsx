@@ -90,6 +90,7 @@ const ServicesSection = () => {
                                                     height: '4rem',
                                                     margin: '0 auto'
                                                 }}
+                                                loading="lazy"
                                                 src={service.icon}
                                             />
                                         </Box>

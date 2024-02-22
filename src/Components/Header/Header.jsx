@@ -44,7 +44,7 @@ const Header = () => {
                 sx={{
                     height: {
                         xs: '8vh',
-                        md: '7vh',
+                        md: '9vh',
                         lg: '9vh'
                     },
                     paddingX: { xs: '10px' }
@@ -55,6 +55,7 @@ const Header = () => {
                         <Box component="a" href="/">
                             <Box
                                 component="img"
+                                loading="lazy"
                                 src={image}
                                 sx={{
                                     height: {

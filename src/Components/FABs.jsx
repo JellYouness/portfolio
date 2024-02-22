@@ -14,10 +14,30 @@ const FABs = () => {
     return (
         <Stack direction="column" spacing={0.5} style={style}>
             <Box component="a" href="https://github.com/JellYouness">
-                <GitHub sx={{ fontSize: '40px', textDecoration: 'none', color: 'black' }} />
+                <GitHub
+                    sx={{
+                        fontSize: '40px',
+                        textDecoration: 'none',
+                        color: 'black',
+                        '&:hover': {
+                            transform: 'scale(1.1)',
+                            transition: '200ms'
+                        }
+                    }}
+                />
             </Box>
             <Box component="a" href="https://www.linkedin.com/in/youness-jellouli/">
-                <LinkedIn sx={{ fontSize: '40px', textDecoration: 'none', color: 'black' }} />
+                <LinkedIn
+                    sx={{
+                        fontSize: '40px',
+                        textDecoration: 'none',
+                        color: 'black',
+                        '&:hover': {
+                            transform: 'scale(1.1)',
+                            transition: '200ms'
+                        }
+                    }}
+                />
             </Box>
         </Stack>
     );
