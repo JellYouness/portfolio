@@ -7,7 +7,7 @@ const initialState = { value: 'fr' };
 // ==============================|| SLICE - MENU ||============================== //
 
 const lang = createSlice({
-    name: 'lang ',
+    name: 'lang',
     initialState,
     reducers: {
         useFr(state) {

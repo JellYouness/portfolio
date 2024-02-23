@@ -60,7 +60,7 @@ const Projects = () => {
                                         <img
                                             loading="lazy"
                                             src={project.image}
-                                            style={{ border: '1px solid black', borderRadius: '10px' }}
+                                            style={{ border: '1px solid black', borderRadius: '10px', borderBottom: '3px solid black' }}
                                             width="100%"
                                             height="198"
                                         />
@@ -84,10 +84,10 @@ const Projects = () => {
                                                     Github
                                                 </Button>
                                             </Grid>
-                                            <Grid item xs={12} md={5.9} sx={{ marginLeft: 0 }}>
+                                            <Grid item xs={12} md={5.9} sx={{ marginLeft: 0, marginTop: { xs: 1, md: 0 } }}>
                                                 <Button variant="outlined" fullWidth target="_blank" href={project.preview}>
                                                     <Language sx={{ marginRight: 0.5 }} />
-                                                    Preview
+                                                    Détails
                                                 </Button>
                                             </Grid>
                                         </Grid>

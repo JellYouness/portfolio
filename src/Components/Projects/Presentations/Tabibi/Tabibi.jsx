@@ -2,10 +2,11 @@ import { Box, Container, List, ListItem, ListItemText, Paper, Typography, makeSt
 import React from 'react';
 import { config } from '../../../../config';
 import gds from '../../../../assets/images/gds.png';
+import archi from '../../../../assets/images/tabibi/architecture.png';
 import { useSelector } from 'react-redux';
-import { EN, FR } from './Data';
+import { EN, FR, imgs } from './Data';
 
-const StockManager = () => {
+const Tabibi = () => {
     const { value } = useSelector((state) => state.lang);
     const translations = value === 'en' ? EN : FR;
     return (
@@ -48,7 +49,8 @@ const StockManager = () => {
                                 component="a"
                                 target="_blank"
                                 sx={{ textDecoration: 'none', marginLeft: 0.5 }}
-                                href="http://stockmanager.rf.gd/Stock-Management/"
+                                href="http://Tabibi
+                            .rf.gd/Stock-Management/"
                             >
                                 OPTIM'STOCK
                             </Typography>
@@ -62,9 +64,9 @@ const StockManager = () => {
                     </Typography>
                     <List>
                         <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <span style={{ fontWeight: '500', fontSize: '18px' }}>1 - {translations.productManagementTitle}:</span>
+                            <span style={{ fontWeight: '500', fontSize: '18px' }}>1 - {translations.emergencyManagementTitle}:</span>
                             <List sx={{ listStyleType: 'disc' }}>
-                                {translations.productManagement.map((pm, index) => (
+                                {translations.emergencyManagementFeatures.map((pm, index) => (
                                     <ListItem key={index}>
                                         <ListItemText primary={`- ${pm}`} />
                                     </ListItem>
@@ -73,9 +75,9 @@ const StockManager = () => {
                         </ListItem>
 
                         <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <span style={{ fontWeight: '500', fontSize: '18px' }}>2 - {translations.ordersTitle}:</span>
+                            <span style={{ fontWeight: '500', fontSize: '18px' }}>2 - {translations.medicalAdviceTitle}:</span>
                             <List>
-                                {translations.orders.map((pm, index) => (
+                                {translations.medicalAdviceFeatures.map((pm, index) => (
                                     <ListItem key={index}>
                                         <ListItemText primary={`- ${pm}`} />
                                     </ListItem>
@@ -84,9 +86,9 @@ const StockManager = () => {
                         </ListItem>
 
                         <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <span style={{ fontWeight: '500', fontSize: '18px' }}>3 - {translations.customersTitle}:</span>
+                            <span style={{ fontWeight: '500', fontSize: '18px' }}>3 - {translations.patientManagementTitle}:</span>
                             <List>
-                                {translations.customers.map((pm, index) => (
+                                {translations.patientManagementFeatures.map((pm, index) => (
                                     <ListItem key={index}>
                                         <ListItemText primary={`- ${pm}`} />
                                     </ListItem>
@@ -95,20 +97,11 @@ const StockManager = () => {
                         </ListItem>
 
                         <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <span style={{ fontWeight: '500', fontSize: '18px' }}>4 - {translations.suppliersTitle}:</span>
+                            <span style={{ fontWeight: '500', fontSize: '18px' }}>
+                                4 - {translations.communicationAndCollaborationTitle}:
+                            </span>
                             <List>
-                                {translations.suppliers.map((pm, index) => (
-                                    <ListItem key={index}>
-                                        <ListItemText primary={`- ${pm}`} />
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </ListItem>
-
-                        <ListItem sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <span style={{ fontWeight: '500', fontSize: '18px' }}>5 - {translations.otherFeaturesTitle}:</span>
-                            <List>
-                                {translations.otherFeatures.map((pm, index) => (
+                                {translations.communicationAndCollaborationFeatures.map((pm, index) => (
                                     <ListItem key={index}>
                                         <ListItemText primary={`- ${pm}`} />
                                     </ListItem>
@@ -124,19 +117,19 @@ const StockManager = () => {
                     </Typography>
                     <List>
                         <ListItem>
-                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits1Title}:</span>
+                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits1Title} </span>
                             <ListItemText primary={` ${translations.benefits1}`} />
                         </ListItem>
                         <ListItem>
-                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits2Title}:</span>
+                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits2Title}</span>
                             <ListItemText primary={` ${translations.benefits2}`} />
                         </ListItem>
                         <ListItem>
-                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits3Title}:</span>
+                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits3Title}</span>
                             <ListItemText primary={` ${translations.benefits3}`} />
                         </ListItem>
                         <ListItem>
-                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits4Title}:</span>
+                            <span style={{ fontWeight: '600', fontSize: '16px' }}>- {translations.benefits4Title}</span>
                             <ListItemText primary={` ${translations.benefits4}`} />
                         </ListItem>
                     </List>
@@ -164,6 +157,25 @@ const StockManager = () => {
                             <ListItemText primary={`: ${translations.technologiesUsedDevelopmentTools}`} />
                         </ListItem>
                     </List>
+                    <Box>
+                        <Typography variant="h6" gutterBottom sx={{ borderBottom: '1px solid black', display: 'inline' }}>
+                            Architecture:
+                        </Typography>
+                        <Box
+                            component="img"
+                            src={archi}
+                            loading="lazy"
+                            mt={2}
+                            width={{ xs: '80%', md: '45%' }}
+                            sx={{
+                                borderRadius: '15px',
+                                border: '1px solid black',
+                                marginBottom: 5,
+                                display: 'block',
+                                marginLeft: { xs: 3, md: 15 }
+                            }}
+                        ></Box>
+                    </Box>
 
                     <Typography variant="h4" gutterBottom>
                         <span style={{ fontWeight: '500', borderBottom: '4px solid #f5df4e', paddingBottom: '5px' }}>
@@ -171,7 +183,7 @@ const StockManager = () => {
                         </span>
                     </Typography>
 
-                    {translations.imgs.map((img, index) => (
+                    {imgs.map((img, index) => (
                         <Box key={index}>
                             <Typography variant="h6" gutterBottom sx={{ borderBottom: '1px solid black', display: 'inline' }}>
                                 {img.name}
@@ -205,4 +217,4 @@ const StockManager = () => {
     );
 };
 
-export default StockManager;
+export default Tabibi;

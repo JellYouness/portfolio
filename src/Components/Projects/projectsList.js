@@ -23,7 +23,7 @@ const projects = [
     {
         image: tabibi,
         title: 'Tabibi - Gestion des Urgences',
-        body: "Conception et Développement d'une application Web médicale moderne pour la Gestion des Urgences(TABIBI), presenté comme projet de fin des études universitaires.",
+        body: "Conception et Développement d'une application Web médicale moderne pour la Gestion des Urgences (TABIBI), presenté comme projet de fin des études universitaires.",
         chips: [
             {
                 img: react
@@ -38,13 +38,13 @@ const projects = [
                 img: mysql
             }
         ],
-        preview: 'https://github.com/JellYouness/Tabibi',
+        preview: '/projects/tabibi',
         github: 'https://github.com/JellYouness/Tabibi'
     },
     {
         image: istech,
         title: 'IS-TECH - Club Manager',
-        body: "Conception et Développement d'une application Web moderne pour la Gestion des Clubs(Membres, Abonnements, Acces...), presenté comme projet de fin des études universitaires.",
+        body: "Conception et Développement d'une application Web moderne pour la Gestion des Clubs (Membres, Abonnements, Acces...).",
         chips: [
             {
                 img: react
@@ -107,7 +107,7 @@ const projects = [
                 img: mysql
             }
         ],
-        preview: null,
+        preview: '/projects/pcc-membership-management',
         github: 'https://github.com/JellYouness/Gestion-des-membres'
     },
     {
