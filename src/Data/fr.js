@@ -21,7 +21,7 @@ const fr = {
     AboutTitle: 'A PROPOS DE MOI',
     AboutSubTitle: 'Me Connaître Plus',
     AboutBody:
-        'Je suis un développeur passionné par la technologie web. J’aime créer des sites Web simples, propres et élégants qui offrent une valeur réelle à l’utilisateur final. Livrer le travail dans les délais et le budget qui répond aux exigences du client est notre moto. À chaque frappe, je me consacre à transformer des concepts en expériences web dynamiques, contribuant ainsi à un monde numérique à la fois intuitif et engageant.',
+        'Je suis un développeur passionné par les technologies web. J’aime créer des sites Web simples, propres et élégants qui offrent une valeur réelle à l’utilisateur final. Livrer le travail dans les délais et le budget qui répond aux exigences du client est notre moto. À chaque frappe, je me consacre à transformer des concepts en expériences web dynamiques, contribuant ainsi à un monde numérique à la fois intuitif et engageant.',
     AboutYears: "Ans d'",
 
     ////////////////////////////   Services    ///////////////////////////////

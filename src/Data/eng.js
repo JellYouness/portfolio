@@ -20,7 +20,7 @@ const eng = {
     AboutTitle: 'About Me',
     AboutSubTitle: 'Know Me More',
     AboutBody:
-        "I'm an avid developer deeply passionate about web technology. I enjoy crafting simple, clean and slick websites that provide real value to the end user. Delivering work within time and budget which meets client’s requirements is our moto. With every keystroke, I'm dedicated to transforming concepts into dynamic web experiences, contributing to a digital realm that's both intuitive and engaging.",
+        "I'm an avid developer deeply passionate about web technologies. I enjoy crafting simple, clean and slick websites that provide real value to the end user. Delivering work within time and budget which meets client’s requirements is our moto. With every keystroke, I'm dedicated to transforming concepts into dynamic web experiences, contributing to a digital realm that's both intuitive and engaging.",
     AboutYears: 'Years of ',
 
     ////////////////////////////   Services    ///////////////////////////////

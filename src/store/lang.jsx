@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // initial state
-const initialState = { value: 'fr' };
+const initialState = { value: 'en' };
 
 // ==============================|| SLICE - MENU ||============================== //
 
