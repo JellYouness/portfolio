@@ -1,7 +1,7 @@
 import { Box, Container, List, ListItem, ListItemText, Paper, Typography, makeStyles } from '@mui/material';
 import React from 'react';
 import { config } from '../../../../config';
-import gds from '../../../../assets/images/gds.png';
+import tabibi from '../../../../assets/images/tabibi.png';
 import archi from '../../../../assets/images/tabibi/architecture.png';
 import { useSelector } from 'react-redux';
 import { EN, FR, imgs } from './Data';
@@ -19,7 +19,7 @@ const Tabibi = () => {
                     <Box
                         component="img"
                         loading="lazy"
-                        src={gds}
+                        src={tabibi}
                         mt={2}
                         width={{ xs: '100%', md: '80%' }}
                         sx={{ borderRadius: '15px', border: '1px solid black', marginBottom: 5, display: 'block', marginX: 'auto' }}
@@ -38,23 +38,10 @@ const Tabibi = () => {
                                 component="a"
                                 target="_blank"
                                 sx={{ textDecoration: 'none', marginLeft: 0.5 }}
-                                href="https://github.com/JellYouness/Stock-Management"
+                                href="https://github.com/JellYouness/Tabibi"
                             >
                                 Code Source
                             </Typography>
-                        </ListItem>
-                        <ListItem>
-                            <Typography>- Preview: </Typography>
-                            <Typography
-                                component="a"
-                                target="_blank"
-                                sx={{ textDecoration: 'none', marginLeft: 0.5 }}
-                                href="http://Tabibi
-                            .rf.gd/Stock-Management/"
-                            >
-                                OPTIM'STOCK
-                            </Typography>
-                            <Typography sx={{ marginLeft: 1 }}>(admin/admin)</Typography>
                         </ListItem>
                     </List>
                     <Typography variant="h4" gutterBottom>
