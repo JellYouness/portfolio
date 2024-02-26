@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import { config, ColoredTheme } from '../../config';
 import image from '../../assets/images/Logo.png';
 import MobileNavigation from './MobileNavigation';
+import FABs from '../FABs';
 
 const Header = () => {
     const [navColor, setNavColor] = useState('unset');
@@ -81,6 +82,10 @@ const Header = () => {
                             <MenuIcon />
                         </IconButton>
                     )}
+                </Grid>
+
+                <Grid item>
+                    <FABs />
                 </Grid>
             </Grid>
             <Drawer anchor="right" open={openDrawer} onClose={openDrawerHandle}>

@@ -41,27 +41,7 @@ const projects = [
         preview: '/projects/tabibi',
         github: 'https://github.com/JellYouness/Tabibi'
     },
-    {
-        image: istech,
-        title: 'IS-TECH - Club Manager',
-        body: "Conception et Développement d'une application Web moderne pour la Gestion des Clubs (Membres, Abonnements, Acces...).",
-        chips: [
-            {
-                img: react
-            },
-            {
-                img: mui
-            },
-            {
-                img: laravel
-            },
-            {
-                img: mysql
-            }
-        ],
-        preview: 'https://github.com/JellYouness/Tabibi',
-        github: 'https://github.com/JellYouness/Tabibi'
-    },
+
     {
         image: dgm,
         title: 'Digital Mind Agency',
@@ -82,33 +62,6 @@ const projects = [
         ],
         preview: 'https://jellyouness.github.io/Digital-Mind-Agency/',
         github: 'https://github.com/JellYouness/Digital-Mind-Agency'
-    },
-    {
-        image: gdm,
-        title: 'PCC Membership management',
-        body: "Conception et réalisation d'une application web pour la gestion des membres et les abonnements de l'entreprise Palmeraie Country Club.",
-        chips: [
-            {
-                img: html
-            },
-            {
-                img: css
-            },
-            {
-                img: bootstrap
-            },
-            {
-                img: js
-            },
-            {
-                img: php
-            },
-            {
-                img: mysql
-            }
-        ],
-        preview: '/projects/pcc-membership-management',
-        github: 'https://github.com/JellYouness/Gestion-des-membres'
     },
     {
         image: gds,
@@ -136,6 +89,54 @@ const projects = [
         ],
         preview: '/projects/stock-manager',
         github: 'https://github.com/JellYouness/Stock-Management'
+    },
+    {
+        image: istech,
+        title: 'IS-TECH - Club Manager',
+        body: "Conception et Développement d'une application Web moderne pour la Gestion des Clubs (Membres, Abonnements, Acces...).",
+        chips: [
+            {
+                img: react
+            },
+            {
+                img: mui
+            },
+            {
+                img: laravel
+            },
+            {
+                img: mysql
+            }
+        ],
+        preview: 'https://github.com/JellYouness/Tabibi',
+        github: 'https://github.com/JellYouness/Tabibi'
+    },
+    {
+        image: gdm,
+        title: 'PCC Membership management',
+        body: "Conception et réalisation d'une application web pour la gestion des membres et les abonnements de l'entreprise Palmeraie Country Club.",
+        chips: [
+            {
+                img: html
+            },
+            {
+                img: css
+            },
+            {
+                img: bootstrap
+            },
+            {
+                img: js
+            },
+            {
+                img: php
+            },
+            {
+                img: mysql
+            }
+        ],
+        preview: '/projects/pcc-membership-management',
+        github: 'https://github.com/JellYouness/Gestion-des-membres'
     }
 ];
 
