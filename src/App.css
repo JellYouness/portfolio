@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
 *::selection{
     background-color: #61dafb;
 }
